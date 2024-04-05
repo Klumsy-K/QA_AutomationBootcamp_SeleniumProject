@@ -14,7 +14,8 @@ public class Challenges {
 //        checkArrayEmpty(arr2);
 //        checkArrayElem(arr1, 3);
 //        cumulativeSum(15);
-        FizzBuzz(25);
+//        FizzBuzz(25);
+        RizzBizz(100);
 
     }
 
@@ -136,6 +137,31 @@ public class Challenges {
                 System.out.print(i);
             }
         }
+    }
+
+    static void RizzBizz (int n ){
+        for (int i =0;i<=n;i++){
+            System.out.println(numChecker(i));
+        }
+
+    }
+
+    static String numChecker (int num){
+
+       if ((num%7==0)&&(num%11==0)){
+           return "FIzzBuzz";
+       }
+       else if (num%7==0){
+           return "Rizz";
+       }
+       else if ((num&11)==0){
+           return "Bizz";
+       }
+       else {
+           return String.valueOf(num);
+       }
+
+
     }
 
 }
