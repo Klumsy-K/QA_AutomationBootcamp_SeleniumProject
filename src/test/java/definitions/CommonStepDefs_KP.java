@@ -12,10 +12,15 @@ public class CommonStepDefs_KP {
         if(pageName.equals("quote")) {
             getDriver().get("https://skryabin.com/market/quote.html");
         }
-        else if (pageName.equals("google")){
+        if (pageName.equals("google")){
             getDriver().get("https://www.google.com");
         }
-        else throw new Error("Page name unrecognized: "+pageName);
+        if (pageName.equalsIgnoreCase("usps")){
+            getDriver().get("https://www.usps.com/");
+        }
+        else {
+            throw new Error("Page name unrecognized: "+pageName);
+        }
     }
 
     @And ("I fill all required fields")
@@ -45,6 +50,7 @@ public class CommonStepDefs_KP {
 
         getDriver().findElement(By.xpath("//button [@name='formSubmit']")).click();
     }
+
 
 
 }
