@@ -8,6 +8,9 @@ public class Challenges2 {
     public static void main(String[] args) {
 
         String revSentence = masterYodaSays("I study WebDriver");
+        // this method returns the required string but doesn't print it.
+        // We will print it
+
         System.out.println(revSentence);
 
 //      multiplesOf(5);
@@ -18,17 +21,25 @@ public class Challenges2 {
     }
 
     public static String masterYodaSays (String sentence){
-       String[] sentArr = sentence.split(" ");
-        System.out.println(Arrays.toString(sentArr));
-//        System.out.println(sentArr.length);
-        int index = (sentArr.length);
-       String[] sentArrRev = new String[index];
-       int j=0;
-       for (int i = (sentArr.length-1); i >= 0; i --){
-               sentArrRev[j] = (sentArr[i]);
-           j++;
 
-       }
+//      We use two arrays: one is the given string as array;
+//      The other is an empty array of matching length.
+
+        String[] sentArr = sentence.split(" ");
+        String[] sentArrRev = new String[sentArr.length];
+        int j=0;
+        for (int i = (sentArr.length-1); i >= 0; i --){
+            sentArrRev[j] = (sentArr[i]);
+            j++;
+
+//      i finds the index of source array and counts down :
+//      j gives the index of result array and counts up
+
+        }
+
+//      Now lets return the result as a regular string again> we will get rid of the commas
+//      in the default formatting of Arrays.toString() method using .replace
+
        return Arrays.toString(sentArrRev).replace(",", "");
     }
 
