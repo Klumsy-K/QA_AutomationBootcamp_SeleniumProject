@@ -18,6 +18,9 @@ public class CommonStepDefs_KP {
         if (pageName.equalsIgnoreCase("usps")){
             getDriver().get("https://www.usps.com/");
         }
+        if (pageName.equalsIgnoreCase("calculator")){
+            getDriver().get("https://www.calculator.net");
+        }
         else {
             throw new Error("Page name unrecognized: "+pageName);
         }
@@ -52,6 +55,9 @@ public class CommonStepDefs_KP {
     }
 
 
-
+    @And("I confirm box alert")
+    public void iConfirmBoxAlert() {
+        getDriver().switchTo().alert().accept();
+    }
 }
 
