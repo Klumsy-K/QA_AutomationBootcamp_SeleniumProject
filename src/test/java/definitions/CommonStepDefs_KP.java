@@ -21,6 +21,9 @@ public class CommonStepDefs_KP {
         if (pageName.equalsIgnoreCase("calculator")){
             getDriver().get("https://www.calculator.net");
         }
+        if (pageName.equalsIgnoreCase("amazon")){
+            getDriver().get("https://www.amazon.com/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice");
+        }
         else {
             throw new Error("Page name unrecognized: "+pageName);
         }
