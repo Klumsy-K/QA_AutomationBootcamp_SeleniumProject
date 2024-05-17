@@ -1,5 +1,4 @@
-<button id="colorChange" type="button" class="mt-4 text-danger btn btn-primary">Color Change</button>
-  @prax
+@prax
   Feature: practice feature
     
     @prax1
