@@ -3,4 +3,4 @@
 
     @CareerPortal1
     Scenario: Verify GET request
-      Given I verify GET request for "/applications"
+      Given I verify GET request for "/candidates"
